@@ -129,22 +129,65 @@
 </section>
 
 <!-- Contact -->
-<section class="section contact-section" id="contact">
+<!-- <section class="section contact-section" id="contact">
  
     <h2>Contact</h2>
     <p>Nous serions ravis d’échanger avec vous. Écrivez-nous pour collaborer, poser des questions, ou simplement nous saluer !</p>
 
     <div class="form-wrapper">
-    <form action="https://docs.google.com/forms/d/1X4NuMrE3DDrd_slXavkbKS8-x43AhMO5l78JbKoL46w/edit" method="POST" target="_blank" class="contact-form">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfa5-4n3CKrtxol0KU8VDlQL0csGrlyCGDXa1s_iGmOZQEeNA/formResponse?usp=pp_url" method="POST" target="_blank" class="contact-form">
       <input type="text" name="entry.456790426" placeholder="Votre nom" required />
       <input type="email" name="entry.1402891967" placeholder="Votre email" required />
       <textarea name="entry.248545648" rows="5" placeholder="Votre message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </div>
-</section>
+</section> -->
 
 <script src="script.js"></script> 
+
+<section class="section contact-section" id="contact">
+  <h2>Contact</h2>
+  <p>Nous serions ravis d’échanger avec vous. Écrivez-nous pour collaborer, poser des questions, ou simplement nous saluer !</p>
+
+  <div class="form-wrapper">
+    <form id="contact-form">
+      <input type="text" name="entry.456790426" placeholder="Votre nom" required />
+      <input type="email" name="entry.1402891967" placeholder="Votre email" required />
+      <textarea name="entry.248545648" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <p id="thank-you" style="display:none; color: green; margin-top: 10px;">
+      Merci pour votre message ! Nous vous répondrons bientôt.
+    </p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const thankYou = document.getElementById("thank-you");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent redirect
+
+    const formData = new FormData(form);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSfa5-4n3CKrtxol0KU8VDlQL0csGrlyCGDXa1s_iGmOZQEeNA/formResponse", {
+      method: "POST",
+      mode: "no-cors", // Google requires no-cors
+      body: formData
+    })
+    .then(() => {
+      form.reset(); // clear fields
+      thankYou.style.display = "block"; // show thank-you message
+    })
+    .catch((err) => {
+      console.error("Erreur lors de l'envoi", err);
+    });
+  });
+</script>
+
+
 
 </body>
 </html>
