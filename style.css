@@ -568,3 +568,63 @@ text-transform: uppercase;
   padding: 0 4px;
   display: inline; /* Ensures inline placement */
 }
+
+
+
+/* ------------------------------------------------OVERRIDE--------------------------------------- */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-bar a {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner-left,
+  .banner-center,
+  .banner-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-right img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .row,
+  .row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .text-column {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .image-column img {
+    max-width: 100%;
+    height: auto;
+  }
+}
