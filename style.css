@@ -495,6 +495,15 @@ body {
     height: auto;
   }
 
+  .carousel-image {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
   .side-by-side-images {
     flex-direction: column;
     gap: 16px;
