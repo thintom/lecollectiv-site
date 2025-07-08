@@ -501,3 +501,53 @@ body {
     padding: 20px 10px;
   }
 }
+
+
+/* ✅ Fix image visibility for project sections */
+.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-column img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ✅ Mobile-specific image & banner alignment fixes */
+@media (max-width: 768px) {
+  .banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-color);
+  }
+
+  .banner-right img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .image-column {
+    padding: 10px;
+  }
+
+  .image-column img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
