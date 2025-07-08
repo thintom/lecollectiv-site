@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projet Mtiéki – Eau potable</title>
   <link rel="stylesheet" href="style.css" /> <!-- reuse your main CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     .project-detail {
       max-width: 900px;
@@ -67,30 +69,87 @@ text-transform: uppercase;
     }
 
 
-.language-toggle {
-  width: 100%;
-  text-align: right;
-  margin: 20px 30px 0 0;
-  font-weight: bold;
-  display: block;
-}
-.language-toggle a {
-  text-decoration: none;
-  color: #333;
-  padding: 0 4px;
-}
-
 .language-toggle a:hover {
   text-decoration: underline;
+}
+
+.language-toggle {
+  margin-left: 10px;
+  font-weight: bold;
+  display: inline-flex; /* Ensures children are horizontal */
+  align-items: center;
+  gap: 4px; /* Optional: adds spacing between items */
+}
+
+.language-toggle a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 4px;
+  display: inline; /* Ensures inline placement */
+}
+
+.nav-bar,.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+  font-family: Bebas Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-weight: 400;
+  line-height: 1.04;
+  margin: 0 0 7px;
+text-transform: uppercase;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--background-color);
+  border-bottom: 2px solid #eee;
+
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 0 10px;
+    display: block;
+}
+
+/* Directly target the img with class nav-logo */
+.nav-logo {
+  height: 100px; /* or whatever size you want */
+  width: auto;
+  display: block;
+  margin-right: 10px; /* spacing to links */
 }
 
   </style>
 </head>
 <body>
 
-    <div class="language-toggle">
-    <a href="waterpump-fr.html">FR</a> | <a href="waterpump.html">EN</a>
+  <div class="nav-bar">
+    <div class="nav-left">
+        <img src="logo4.png" alt="Logo" class="nav-logo" /> 
+      
+      <a href="index-fr.html#vision">Notre vision</a>
+      <a href="waterpump-fr.html">Projets</a>
+      <a href="index-fr.html#about">À propos</a>
+      <a href="index-fr.html#contact">Contact</a>
+    </div>
+    
+    <div class="nav-right">
+       <a href="#"><i class="fab fa-facebook"></i> Rejoignez-nous</a>
+       <span class="language-toggle">
+     <a href="waterpump-fr.html">FR</a> | <a href="waterpump.html">EN</a>
+  </span>
+    </div>
   </div>
+
+    <!-- <div class="language-toggle">
+    <a href="waterpump-fr.html">FR</a> | <a href="waterpump.html">EN</a>
+  </div> -->
 
   <div class="project-detail">
     <!-- Two top images -->
