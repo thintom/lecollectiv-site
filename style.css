@@ -1,38 +1,44 @@
 /* 🌐 Root Variables */
+
 :root {
-  --main-color: #f26a8d;
-  --text-color: #000000;
-  --background-color: #fff;
-  --gray-light: #f6f6f6;
-  --gray-medium: #cccccc;
-  --gray-dark: #666666;
-  --black: #000000;
+  --main-color: #f26a8d;        /* Main pink */
+  --text-color: #000000;        /* Standard black text */
+  --background-color: #fff;  /* White background */
+  --gray-light: #f6f6f6;        /* Light gray (e.g. backgrounds, borders) */
+  --gray-medium: #cccccc;       /* Medium gray */
+  --gray-dark: #666666;         /* Darker gray for contrast */
+  --black: #000000;             /* Full black (optional duplicate of text-color) */
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 
 /* 🔤 Font Styles */
 body {
   margin: 0;
-  font-family: 'ff-scala', serif, 'Roboto', sans-serif;
-  background-color: rgba(0, 0, 0, 0.05);
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  color: #323232;
-  font-size: 16px;
-  line-height: 1.38;
-  overflow-x: hidden;
-  position: relative;
+  font-family: 'ff-scala', serif, 'Roboto', serif,'Roboto', sans-serif;
+  background-color: var(--background-color); /* ✅ Fixed: use CSS variable */
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    color: #323232;
+    font-size: 16px;
+    line-height: 1.38;
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
 }
 
 /* 🧠 Heading Font Classes */
-.nav-bar, .h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+.nav-bar,.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
   font-family: Bebas Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
   font-weight: 400;
   line-height: 1.04;
@@ -45,6 +51,7 @@ body {
   text-transform: lowercase;
   margin: 0;
 }
+
 
 /* 🔷 Navigation Bar */
 .nav-bar {
@@ -88,18 +95,21 @@ body {
   padding-right: 50px;
 }
 
-/* 🏞️ Banner */
+
+/* 🏞️ Banner Container */
 .banner {
   display: flex;
   width: 100%;
   height: 350px;
 }
 
+/* 🎨 Left Colored Bar */
 .banner-left {
   width: 10%;
   background-color: var(--main-color);
 }
 
+/* 📝 Center Content Section */
 .banner-center {
   width: 40%;
   background-color: var(--background-color);
@@ -148,6 +158,8 @@ body {
   font-size: 18px;
 }
 
+
+/* 🖼️ Right Banner with Image */
 .banner-right {
   width: 50%;
   background-color: var(--main-color);
@@ -163,17 +175,40 @@ body {
   object-fit: contain;
 }
 
+
+/* 📱 Responsive Layout */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner-left, .banner-center, .banner-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-center {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
 /* Facebook icon in nav */
 .nav-right i {
   margin-right: 6px;
   color: #1877F2;
 }
 
-/* Sections */
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
 .section {
   padding: 40px 40px;
   background-color: #fff;
   font-family: 'ff-scala','Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
   color: #323232;
   font-size: 16px;
   line-height: 1.38;
@@ -217,8 +252,9 @@ body {
 
 .text-column p {
   font-size: 14px;
-  text-align: justify;
+  line-height: 1.38;
   margin-bottom: 1em;
+  text-align: justify;
   letter-spacing: 0.02em;
   word-spacing: 0.1em;
 }
@@ -226,19 +262,50 @@ body {
 .image-column img {
   width: 100%;
   max-width: 500px;
-  height: auto;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  height: auto;
   object-fit: cover;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Project section */
-.left-column h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
+@media (max-width: 768px) {
+  .row, .row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .text-column {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .image-column img {
+    max-width: 100%;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+.section {
+  padding: 40px 40px;
+  background-color: #fff;
+  color: #323232;
+  font-family: 'ff-scala','Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
 }
 
 .left-column p {
@@ -248,6 +315,24 @@ body {
   text-align: justify;
   letter-spacing: 0.02em;
   word-spacing: 0.1em;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-column h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .carousel {
@@ -270,6 +355,9 @@ body {
 .carousel-image.active {
   opacity: 1;
 }
+
+
+/* --------------------------------------------------------------------------------- */
 
 .action-buttons {
   display: flex;
@@ -296,14 +384,31 @@ body {
   text-decoration: none;
 }
 
-.donate-btn,
+.donate-btn {
+  background-color: var(--black);
+  color: white;
+}
+
+.donate-btn .arrow {
+  margin-left: 10px;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.donate-btn:hover .arrow {
+  background-color: #d65a79;
+}
+
 .back-btn {
   background-color: var(--black);
   color: white;
 }
 
-.donate-btn:hover,
 .back-btn:hover {
+  background-color: #d65a79;
+}
+
+.donate-btn:hover {
   background-color: #d65a79;
 }
 
@@ -316,13 +421,25 @@ body {
   box-sizing: border-box;
 }
 
-/* Contact section */
+.image-column img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 .contact-section {
   text-align: center;
   padding: 60px 20px;
   background-color: #f7f7f7;
   font-family: 'ff-scala','Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
   font-size: 14px;
+  line-height: 1.38;
+  margin-bottom: 1em;
   letter-spacing: 0.02em;
   word-spacing: 0.1em;
 }
@@ -360,6 +477,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  align-items: center;
 }
 
 .contact-section h2 {
@@ -386,31 +504,26 @@ body {
   text-decoration: none;
   color: inherit;
   padding: 0 4px;
+  display: inline;
 }
 
-/* 📱 Responsive Fixes (Non-Invasive) */
+
+/* ------------------------------------------------OVERRIDE--------------------------------------- */
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 20px;
   }
 
-  .nav-left, .nav-right {
+  .nav-left,
+  .nav-right {
     flex-direction: column;
     width: 100%;
-    gap: 10px;
-    padding: 0;
   }
 
   .nav-bar a {
-    padding: 8px 0;
-    font-size: 16px;
+    padding: 10px 0;
     width: 100%;
-  }
-
-  .nav-logo {
-    height: 80px;
   }
 
   .banner {
@@ -418,9 +531,10 @@ body {
     height: auto;
   }
 
-  .banner-left, .banner-center, .banner-right {
+  .banner-left,
+  .banner-center,
+  .banner-right {
     width: 100%;
-    padding: 20px;
     height: auto;
   }
 
@@ -429,134 +543,25 @@ body {
     text-align: center;
   }
 
-  .banner-title {
-    font-size: 22px;
-  }
-
-  .banner-button {
-    width: 100%;
-    justify-content: center;
-  }
-
   .banner-right img {
-    width: 100%;
+    max-width: 80%;
     height: auto;
-    object-fit: contain;
   }
 
-  .row, .row.reverse {
+  .row,
+  .row.reverse {
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .column, .text-column, .image-column {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-
-  .text-column h2 {
-    font-size: 22px;
     text-align: center;
+    gap: 40px;
   }
 
-  .text-column p {
-    font-size: 14px;
-  }
-
-  .image-column img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  .contact-section {
-    padding: 40px 20px;
-  }
-
-  .contact-section h2 {
-    font-size: 24px;
-  }
-
-  .form-wrapper {
+  .text-column {
+    max-width: 100%;
     padding: 0 10px;
   }
 
-  .action-buttons {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-
-  .carousel {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .carousel-image {
-  position: absolute;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-  .side-by-side-images {
-    flex-direction: column;
-    gap: 16px;
-    padding: 20px 10px;
-  }
-}
-
-
-/* ✅ Fix image visibility for project sections */
-.image-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.image-column img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* ✅ Mobile-specific image & banner alignment fixes */
-@media (max-width: 768px) {
-  .banner-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--main-color);
-  }
-
-  .banner-right img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .image-column {
-    padding: 10px;
-  }
-
   .image-column img {
     max-width: 100%;
     height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
   }
 }
-
