@@ -398,9 +398,8 @@ text-transform: uppercase;
 .carousel {
   position: relative;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3; /* Maintain consistent height ratio */
   max-width: 500px;
+  height: 300px; /* Fixed height ensures consistency */
   margin: 0 auto;
   overflow: hidden;
 }
@@ -425,6 +424,7 @@ text-transform: uppercase;
 .carousel-image.active {
   opacity: 1;
 }
+
 
 
 
@@ -823,7 +823,6 @@ text-transform: uppercase;
     opacity: 1;
   }
 }
-
 
 
 
