@@ -784,6 +784,11 @@ text-transform: uppercase;
 
 @media (max-width: 768px) {
 
+  .row-reverse {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  
   .carousel {
     height: auto; /* Important: allow height to be flexible */
     padding: 0;
