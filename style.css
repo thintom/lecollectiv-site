@@ -790,42 +790,6 @@ text-transform: uppercase;
   }
 }
 
-@media (max-width: 768px) {
-
-  .row-reverse {
-    flex-direction: column !important;
-    gap: 20px;
-  }
-  
-  .carousel {
-    height: auto; /* Important: allow height to be flexible */
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .carousel-link {
-    display: block;
-    height: auto; /* Important: allow height to be flexible */
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .carousel-image {
-    display: block;
-    width: 100%;
-    height: auto; /* Important: preserve image aspect ratio */
-    opacity: 0;
-    object-fit: contain; /* Changed from 'cover' to avoid cropping */
-    max-width: 100%;
-  }
-
-  .carousel-image.active {
-    opacity: 1;
-  }
-}
 
 
 
