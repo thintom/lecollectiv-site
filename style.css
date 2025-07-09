@@ -581,6 +581,7 @@ text-transform: uppercase;
   .nav-logo {
     height: 60px;
     margin-bottom: 10px;
+    align-self: center; 
   }
 
   .nav-right {
