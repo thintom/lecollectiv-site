@@ -3,225 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Updated Banner Layout</title>
-  <!-- Google Font -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" /> -->
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-
-  <!-- Link to External CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <title>Mobile Banner Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css" />
 </head>
 <body>
 
-  <!-- 🔷 Navigation Bar -->
-  <div class="nav-bar">
-    
-
-
-    <div class="nav-left">
-        <img src="logo4.png" alt="Logo" class="nav-logo" /> 
-      
-      <a href="#vision">Our vision</a>
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <img src="logo4.png" alt="Logo" class="mobile-logo">
+    <div class="mobile-menu">
+      <a href="#vision">Vision</a>
       <a href="waterpump.html">Projects</a>
-      <!-- "#projects" -->
-      <a href="#about">About Us</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
-    </div>
-    
-    <div class="nav-right">
-      <!-- <a href="#">Login</a> -->
-       <a href="#"><i class="fab fa-facebook"></i> Join Us</a>
-
-        <span class="language-toggle">
-    <a href="index-fr.html">FR</a> | <a href="index.html">EN</a>
-   </span>
-
-    </div>
-
-  </div>
-  
-  <!-- 🔷 Main Banner Section -->
-  <div class="banner">
-    <div class="banner-left"></div>
-    
-    <div class="banner-center">
-      <h1 class="banner-title">LET'S ACT COLLECTIVELY TO HAVE AN IMPACT </h1>
-      <p class="banner-paragraph">Change is no longer out of reach</p>
-      
-      <a href="waterpump.html" class="banner-button"> 
-        <!-- href="#projects" -->
-    Join a project <span class="arrow">→</span>
-      </a>
-    </div>
-
-    <div class="banner-right">
-      <img src="car.jpg" alt="Banner Image" />
-    </div>
-  </div>
-
-
-<!-- Our Vision Section -->
-<section class="section vision-section" id = 'vision'>
-  <div class="row">
-    <div class="column text-column">
-      <h2>Our Vision</h2>
-      <p>
-        We believe in a world where every individual has a voice—and the collective power to drive meaningful change.
-        </p>
-        <p>
-        Our mission is to build a participatory system that empowers communities through <b>transparency, collaboration, and direct democracy</b>. 
-        </p>
-        <p>
-        Through the engagement of <b>thousands—perhaps even millions—contributing as little as one euro €/$/£/fcfa each</b>, we envision launching transformative 
-        projects that directly address real community needs. These could include <b>accessible clinics, sustainable agriculture systems, clean water infrastructure, and more in Africa or elsewhere</b>.
-        </p>
-        <p>
-        We believe that people, united by purpose and transparency, can take action without waiting for governments or large corporations to step in.
-        </p>
-        <p>
-        Our commitment is to full transparency: we will share all documents, images, and videos detailing each stage of our projects. Supporters 
-        and participants will be directly involved in both the selection and implementation of initiatives.
-        </p>
-        <p>
-        Thank you for believing in this collective journey.
-      </p>
-    </div>
-    <div class="column image-column">
-      <img src="vision.jpg" alt="Our Vision Image" />
-    </div>
-  </div>
-</section>
-
-
-
- <!-- ----------------------------------------------------------------------------------- -->
-
-
-
- <!-- Projects Section -->
-<section class="section projects-section" id="projects">
-
-  <div class="row row-reverse">
-
-    <!-- Left Column (Text) -->
-    <div class="left-column">
-      <h2>Projects</h2>
-      <p>
-        Our projects reflect the will of our collective. From sustainable agriculture to clean water initiatives, every effort emerges from shared decisions and local engagement. Dive into our projects and become part of a living ecosystem of change.
-      </p>
-    </div>
-
-    <!-- Right Column (Image Carousel) -->
-
-    <div class="right-column">
-      <div class="carousel">
-        <a href="waterpump.html" class="carousel-link">
-          <img src="farm.jpg" class="carousel-image active" alt="Project 1">
-        </a>
-        <a href="waterpump.html" class="carousel-link">
-          <img src="waterpump.jpg" class="carousel-image" alt="Project 2">
-        </a>
+      <a href="#"><i class="fab fa-facebook"></i> Join Us</a>
+      <div class="language-toggle">
+        <a href="index-fr.html">FR</a> | <a href="index.html">EN</a>
       </div>
     </div>
+  </nav>
 
-  </div>
-</section>
+  <!-- Banner -->
+  <section class="mobile-banner">
+    <h1 class="banner-title">LET'S ACT COLLECTIVELY TO HAVE AN IMPACT</h1>
+    <p class="banner-paragraph">Change is no longer out of reach</p>
+    <a href="waterpump.html" class="banner-button">Join a project →</a>
+    <img src="car.jpg" alt="Banner Image" class="banner-img">
+  </section>
 
+  <!-- Vision Section -->
+  <section class="mobile-section" id="vision">
+    <h2>Our Vision</h2>
+    <img src="vision.jpg" alt="Vision Image" class="section-img">
+    <p>We believe in a world where every individual has a voice...</p>
+    <!-- ... rest of text here -->
+  </section>
 
+  <!-- Projects Section -->
+  <section class="mobile-section" id="projects">
+    <h2>Projects</h2>
+    <p>Our projects reflect the will of our collective...</p>
+    <img src="farm.jpg" alt="Project 1" class="section-img">
+    <img src="waterpump.jpg" alt="Project 2" class="section-img">
+  </section>
 
+  <!-- About Section -->
+  <section class="mobile-section" id="about">
+    <h2>About Us</h2>
+    <img src="art_pic.jpg" alt="Team" class="section-img">
+    <p>"Le Collectif" is a citizen-led initiative...</p>
+  </section>
 
-<!-- About Us Section -->
-<section class="section about-section" id="about">
-  <div class="row">
-    <div class="text-column">
-      <h2>About Us</h2>
-      <p>
-        "Le Collectif" is a citizen-led initiative grounded in values of <strong> transparency, collaboration, and dignity</strong>. 
-        Our mission is to empower African — and global — communities through direct democracy and collective action.
-
-        <br><br>
-        Many of us are willing to give a few coins to a person in need. But what if those coins were pooled together, strategically, to create lasting change for entire communities? 
-        That simple thought sparked the idea behind "Le Collectif."
-
-        <br><br>
-        Our values reflect what’s essential for strong and sustainable collaboration: <strong> mutual respect, collective decision-making, and belief in the power of everyday people</strong>. Because we value each individual, we build structures that empower everyone.
-
-        <br><br>
-        From small beginnings to big impact !!
-      </p>
-    </div>
-    <div class="image-column">
-      <img src="art_pic.jpg" alt="Our Team or Work in Action" />
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<!-- <section class="section contact-section" id="contact">
- 
+  <!-- Contact Section -->
+  <section class="mobile-section" id="contact">
     <h2>Contact</h2>
-    <p>We'd love to hear from you. Reach out for collaborations, questions, or just to say hi!</p>
-
-    <div class="form-wrapper">
-    <form action="https://docs.google.com/forms/d/1X4NuMrE3DDrd_slXavkbKS8-x43AhMO5l78JbKoL46w/edit" method="POST" target="_blank" class="contact-form">
+    <p>We'd love to hear from you...</p>
+    <form id="contact-form">
       <input type="text" name="entry.456790426" placeholder="Your Name" required />
       <input type="email" name="entry.1402891967" placeholder="Your Email" required />
-      <textarea name="entry.248545648" rows="5" placeholder="Your Message" required></textarea>
+      <textarea name="entry.248545648" rows="4" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </div>
-</section> -->
+    <p id="thank-you" style="display:none;">Thank you! We will reply soon.</p>
+  </section>
 
-
-
-<script src="script.js"></script> 
-
-
-
-<section class="section contact-section" id="contact">
-  <h2>Contact</h2>
-  <p>We'd love to hear from you. Reach out for collaborations, questions, or just to say hi!</p>
-
-  <div class="form-wrapper">
-    <form id="contact-form">
-      <input type="text" name="entry.456790426" placeholder="Votre nom" required />
-      <input type="email" name="entry.1402891967" placeholder="Votre email" required />
-      <textarea name="entry.248545648" rows="5" placeholder="Votre message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="thank-you" style="display:none; color: green; margin-top: 10px;">
-      Thank you for your message! We will get back to you soon.
-    </p>
-  </div>
-</section>
-
-<script>
-  const form = document.getElementById("contact-form");
-  const thankYou = document.getElementById("thank-you");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // prevent redirect
-
-    const formData = new FormData(form);
-
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSfa5-4n3CKrtxol0KU8VDlQL0csGrlyCGDXa1s_iGmOZQEeNA/formResponse", {
-      method: "POST",
-      mode: "no-cors", // Google requires no-cors
-      body: formData
-    })
-    .then(() => {
-      form.reset(); // clear fields
-      thankYou.style.display = "block"; // show thank-you message
-    })
-    .catch((err) => {
-      console.error("Erreur lors de l'envoi", err);
+  <script>
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch("https://docs.google.com/forms/d/e/1FAIpQLSfa5-4n3CKrtxol0KU8VDlQL0csGrlyCGDXa1s_iGmOZQEeNA/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      }).then(() => {
+        form.reset();
+        document.getElementById("thank-you").style.display = "block";
+      });
     });
-  });
-</script>
-
-
+  </script>
 </body>
 </html>
