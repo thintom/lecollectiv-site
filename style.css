@@ -257,6 +257,14 @@ text-transform: uppercase;
 /* Reverse row for alternation */
 .row.reverse {
   flex-direction: row-reverse;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 6px;
+  background-color: #f6f6f6;
+  width: 100%;
 }
 
 /* Column layout */
