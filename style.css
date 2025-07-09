@@ -791,7 +791,14 @@ text-transform: uppercase;
   .form-wrapper {
     padding: 0 10px;
   }
+
+  .carousel-image {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
 }
+}
+
 
 
 
