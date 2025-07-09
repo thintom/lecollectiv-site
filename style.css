@@ -576,6 +576,7 @@ text-transform: uppercase;
     gap: 10px;
     width: 100%;
     align-items: flex-start;
+    align-items: center; /* Center everything inside nav-left */
   }
 
   .nav-logo {
