@@ -804,7 +804,7 @@ text-transform: uppercase;
     width: 100%;
     height: auto; /* Important: preserve image aspect ratio */
     opacity: 0;
-    object-fit: cover; /* Changed from 'cover' to avoid cropping */
+    object-fit: contain; /* Changed from 'cover' to avoid cropping */
     max-width: 100%;
   }
 
