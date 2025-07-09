@@ -630,3 +630,126 @@ text-transform: uppercase;
   }
 }
 
+
+
+/* -----------------------------------------------
+   📱 Additional Mobile & Tablet Responsiveness
+------------------------------------------------- */
+@media (max-width: 768px) {
+  /* 🔷 NAVIGATION */
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav-logo {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .nav-bar a {
+    font-size: 16px;
+  }
+
+  /* 🔷 BANNER SECTION */
+  .banner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner-left {
+    height: 20px;
+  }
+
+  .banner-center {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .banner-title {
+    font-size: 22px;
+  }
+
+  .banner-paragraph {
+    font-size: 16px;
+  }
+
+  .banner-button {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+  .banner-right {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .banner-right img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 🔷 SECTION LAYOUTS */
+  .row,
+  .row-reverse {
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .text-column,
+  .image-column,
+  .left-column,
+  .right-column {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .text-column h2,
+  .left-column h2 {
+    font-size: 24px;
+  }
+
+  .text-column p,
+  .left-column p {
+    font-size: 14px;
+  }
+
+  .image-column img,
+  .right-column img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .carousel {
+    height: 200px;
+  }
+
+  .contact-section input,
+  .contact-section textarea {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    padding: 0 10px;
+  }
+}
