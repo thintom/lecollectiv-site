@@ -600,12 +600,14 @@ text-transform: uppercase;
 
   .banner-left {
     height: 20px;
+    width: 100%;
   }
 
   .banner-center {
     width: 100%;
     align-items: center;
     text-align: center;
+    justify-content: center;
     padding: 20px;
   }
 
