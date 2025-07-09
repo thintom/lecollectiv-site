@@ -106,9 +106,28 @@ text-transform: uppercase;
   padding-right: 50px;
 }
 
+/* Facebook icon in nav */
+.nav-right i {
+  margin-right: 6px;
+  color: #1877F2; /* Facebook Blue */
+}
 
+.language-toggle {
+  margin-left: 10px;
+  font-weight: bold;
+  display: inline-flex; /* Ensures children are horizontal */
+  align-items: center;
+  gap: 4px; /* Optional: adds spacing between items */
+}
 
+.language-toggle a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 4px;
+  display: inline; /* Ensures inline placement */
+}
 
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
 /* 🏞️ Banner Container */
 .banner {
   display: flex;
@@ -193,36 +212,8 @@ text-transform: uppercase;
   object-fit: contain;
 }
 
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
 
-
-/* 📱 Responsive Layout */
-@media (max-width: 768px) {
-  .banner {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .banner-left, .banner-center, .banner-right {
-    width: 100%;
-    height: auto;
-  }
-
-  .banner-center {
-    align-items: center;
-    text-align: center;
-  }
-}
-
-
-
-/* Facebook icon in nav */
-.nav-right i {
-  margin-right: 6px;
-  color: #1877F2; /* Facebook Blue */
-}
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------------*/
 /* Section padding matches banner width */
 .section {
   padding: 40px 40px;
@@ -234,8 +225,6 @@ text-transform: uppercase;
     color: #323232;
     font-size: 16px;
     line-height: 1.38;
-
-    
 }
 
 .section:first-of-type {
@@ -243,21 +232,8 @@ text-transform: uppercase;
 }
 
 /* Flexbox row structure */
-.row {
+.row1 {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  gap: 6px;
-  background-color: #f6f6f6;
-  width: 100%;
-}
-
-/* Reverse row for alternation */
-.row.reverse {
-  flex-direction: row-reverse;
-    display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
@@ -272,9 +248,24 @@ text-transform: uppercase;
   flex: 1;
 }
 
-.text-column {
-  max-width: 600px;
-  
+/* Image */
+.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Image */
+.image-column img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  object-fit: cover;
+
 }
 
 .text-column h2 {
@@ -284,8 +275,6 @@ text-transform: uppercase;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
-
-  
 }
 
 .text-column p {
@@ -296,54 +285,15 @@ text-transform: uppercase;
    margin-bottom: 1em;  
    letter-spacing: 0.02em;
   word-spacing: 0.1em;
-
 }
 
-/* Image */
-.image-column img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 8px;
-/*   display: block; */
-  margin: 0 auto;
-  height: auto;
-  object-fit: cover;
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;    /* vertical center */
-}
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .row, .row.reverse {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .text-column {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .image-column img {
-    max-width: 100%;
-  }
-}
+/* Flexbox row structure */
+/* Reverse row for alternation */
 
 
-/* ---------------------------------------------------------------------------------------- */
-/* Projects section layout */
-.section {
-  padding: 40px 40px;
-  background-color: #fff;
-  color: #323232;
-  font-family: 'ff-scala','Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.38;
-}
-
-.row {
+.row2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -351,7 +301,50 @@ text-transform: uppercase;
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  gap: 40px;
+  gap: 6px;
+  background-color: #f6f6f6;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Column layout */
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 40px;
+}
+
+.right-column {
+  max-width: 100%;
+}
+
+.carousel {
+  transition: height 0.3s ease;
+  overflow: hidden;
+  max-height: 500px; /* Set a safe maximum height */
+  width: 100%;
+  position: relative;
+  max-width: 500px;
+
+}
+
+.carousel-image {
+  position: absolute;
+  width: 90%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  opacity: 0;
+  border-radius: 8px;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
 }
 
 .left-column p {
@@ -362,84 +355,68 @@ text-transform: uppercase;
    margin-bottom: 1em;  
    letter-spacing: 0.02em;
   word-spacing: 0.1em;
-
-
-}
-
-.row-reverse {
-  flex-direction: row-reverse;
-}
-
-.left-column,
-.right-column {
-  flex: 1;
-  padding: 20px;
 }
 
 .left-column h2 {
+  margin-top: 40px; 
   font-size: 32px;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
 }
-/* 
-.carousel {
-  position: relative;
-  width: 100%;
+
+
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
+
+
+/* Column layout */
+.text-column1,
+.image-column1 {
+  flex: 1;
+}
+
+/* Image */
+.image-column1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Image */
+.image-column1 img {
+  width: 90%;
   max-width: 500px;
-  height: 300px;
-  overflow: hidden;
-}
-
-.carousel-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.carousel-image.active {
-  opacity: 1;
-} */
-
-
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: 300px; /* Fixed height ensures consistency */
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.carousel-link {
+  border-radius: 8px;
   display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  height: auto;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+
 }
 
-.carousel-image.active {
-  opacity: 1;
+.text-column1 h2 {
+    margin-top: 40px; 
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
+.text-column1 p {
+  font-size: 14px;
+  line-height: 1.38;
+  margin-bottom: 10px;
+   text-align: justify; 
+   margin-bottom: 1em;  
+   letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+}
 
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
 
-
-/* --------------------------------------------------------------------------------- */
 
 .action-buttons {
   display: flex;
@@ -494,10 +471,7 @@ text-transform: uppercase;
   background-color: #d65a79;
 }
 
-/* .arrow {
-  color: white;
-  font-size: 18px;
-} */
+
 
 .side-by-side-images {
   display: flex;
@@ -507,24 +481,10 @@ text-transform: uppercase;
   padding: 40px;
   box-sizing: border-box;
 }
-.image-column img {
-  width: 100%;
-  max-width: 500px;
-  height: 300px; /* Set a fixed height */
-  object-fit: cover; /* Ensures the image fills the area without distortion */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
 
-.image-column img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
+
 
 .contact-section {
   text-align: center;
@@ -600,84 +560,8 @@ text-transform: uppercase;
 }
 
 
-.language-toggle {
-  margin-left: 10px;
-  font-weight: bold;
-  display: inline-flex; /* Ensures children are horizontal */
-  align-items: center;
-  gap: 4px; /* Optional: adds spacing between items */
-}
+/* -------------------------------------------------------------------------------------------------- ----------------------*/
 
-.language-toggle a {
-  text-decoration: none;
-  color: inherit;
-  padding: 0 4px;
-  display: inline; /* Ensures inline placement */
-}
-
-/* ------------------------------------------------OVERRIDE--------------------------------------- */
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-bar a {
-    padding: 10px 0;
-    width: 100%;
-  }
-
-  .banner {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .banner-left,
-  .banner-center,
-  .banner-right {
-    width: 100%;
-    height: auto;
-  }
-
-  .banner-center {
-    align-items: center;
-    text-align: center;
-  }
-
-  .banner-right img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  .row,
-  .row.reverse {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .text-column {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .image-column img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-
-
-/* -----------------------------------------------
-   📱 Additional Mobile & Tablet Responsiveness
-------------------------------------------------- */
 @media (max-width: 768px) {
   /* 🔷 NAVIGATION */
   .nav-bar {
@@ -749,7 +633,7 @@ text-transform: uppercase;
   }
 
   /* 🔷 SECTION LAYOUTS */
-  .row,
+  .row1,
   .row-reverse {
     flex-direction: column;
     padding: 0 10px;
@@ -757,6 +641,15 @@ text-transform: uppercase;
     gap: 30px;
   }
 
+  .row2 {
+    flex-direction: column-reverse; /* Stack vertically on phones */
+    padding: 0 10px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .text-column1,
+  .image-column1,
   .text-column,
   .image-column,
   .left-column,
@@ -766,21 +659,27 @@ text-transform: uppercase;
     max-width: 100%;
   }
 
+  .text-column1 h2, 
   .text-column h2,
   .left-column h2 {
     font-size: 24px;
   }
-
+  .text-column1 p,
   .text-column p,
   .left-column p {
     font-size: 14px;
   }
 
+  .image-column1 img,
   .image-column img,
   .right-column img {
     width: 100%;
     height: auto;
     max-width: 100%;
+  }
+
+  .carousel {
+    max-height: 60vh;
   }
 
   .contact-section input,
@@ -791,16 +690,5 @@ text-transform: uppercase;
   .form-wrapper {
     padding: 0 10px;
   }
-
-  .carousel-image {
-  display: block !important;
-  max-width: 100%;
-  height: auto;
 }
-}
-
-
-
-
-
 

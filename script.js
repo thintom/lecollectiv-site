@@ -18,4 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+function adjustCarouselHeight() {
+  const carousel = document.querySelector('.carousel');
+  const activeImage = carousel.querySelector('.carousel-image.active');
+  
+  function setHeight() {
+    const height = activeImage.offsetHeight;
+    carousel.style.height = height + 'px';
+  }
+
+  if (activeImage.complete) {
+    setHeight();
+  } else {
+    activeImage.onload = setHeight;
+  }
+}
+
+window.addEventListener('load', adjustCarouselHeight);
+window.addEventListener('resize', adjustCarouselHeight);
+
+
+
+
 

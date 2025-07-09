@@ -130,7 +130,46 @@ text-transform: uppercase;
   text-align: center;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Container for the image section */
+.side-by-side-images {
+  display: flex;
+  justify-content: center;     /* optional: center the image row */
+  align-items: flex-start;
+  gap: 1rem;                    /* spacing between images */
+  flex-wrap: nowrap;
+}
+
+.image-column3 {
+  flex: 0 0 auto;               /* allow images to shrink proportionally */
+}
+
+.image-column3 img {
+  width: auto;                  /* fill the container width */
+  height: auto;                 /* preserve natural aspect ratio */
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;           /* optional: rounded corners */
+}
+
+@media (max-width: 768px) {
+  .side-by-side-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-column {
+    width: auto;
+    max-width: 90vw; /* keeps image size within screen, but not forced */
+  }
+
+  .image-column img {
+    width: 100%;
+    height: auto;
+  }
+}
   </style>
+
 </head>
 <body>
 
@@ -168,10 +207,10 @@ text-transform: uppercase;
     <h1 class="project-title">Help Bring Clean Water to Mtiéki, Bandjoun — and Launch a Citizen Movement</h1>
 
     <section class="side-by-side-images">
-      <div class="image-column left">
+      <div class="image-column3 left">
         <img src="waterpump1.jpg" alt="Clean water in Mtieki - image 1" />
       </div>
-      <div class="image-column right">
+      <div class="image-column3 right">
         <img src="waterpump2.jpg" alt="Clean water in Mtieki - image 2" />
       </div>
     </section>
