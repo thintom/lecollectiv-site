@@ -596,6 +596,8 @@ text-transform: uppercase;
   .banner {
     flex-direction: column;
     height: auto;
+      width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll */
   }
 
   .banner-left {
@@ -609,6 +611,7 @@ text-transform: uppercase;
     text-align: center;
     justify-content: center;
     padding: 20px;
+    box-sizing: border-box; /* Makes padding count within width */
   }
 
   .banner-title {
