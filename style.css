@@ -769,14 +769,20 @@ text-transform: uppercase;
 
   .carousel {
     width: 100%;
-    max-width: 100%;
     height: auto;
+    overflow: hidden;
+  }
+
+  .carousel-link {
+    display: block;
+    width: 100%;
   }
 
   .carousel-image {
     position: relative;
     width: 100%;
     height: auto;
+    display: block;
     opacity: 0;
   }
 
@@ -784,6 +790,7 @@ text-transform: uppercase;
     opacity: 1;
   }
 }
+
 
 
 
