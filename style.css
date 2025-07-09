@@ -801,7 +801,8 @@ text-transform: uppercase;
 
   .carousel {
     width: 100%;
-    height: auto; /* Important: allow height to be flexible */
+/*     height: auto; /* Important: allow height to be flexible */ */
+    height: 200px;
     overflow: hidden;
   }
 
