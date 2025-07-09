@@ -772,10 +772,6 @@ text-transform: uppercase;
     max-width: 100%;
   }
 
-  .carousel {
-    height: 200px;
-  }
-
   .contact-section input,
   .contact-section textarea {
     width: 100%;
@@ -787,26 +783,20 @@ text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
-  .row,
-  .row-reverse {
-    flex-direction: row-reverse;
-  }
-
-  .left-column,
-  .right-column {
-    padding: 10px;
-    width: 100%;
-  }
 
   .carousel {
-    width: 100%;
     height: auto; /* Important: allow height to be flexible */
-    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .carousel-link {
     display: block;
+    height: auto; /* Important: allow height to be flexible */
+    padding: 0;
     width: 100%;
+    max-width: 100%;
   }
 
   .carousel-image {
@@ -815,6 +805,7 @@ text-transform: uppercase;
     height: auto; /* Important: preserve image aspect ratio */
     opacity: 0;
     object-fit: cover; /* Changed from 'cover' to avoid cropping */
+    max-width: 100%;
   }
 
   .carousel-image.active {
