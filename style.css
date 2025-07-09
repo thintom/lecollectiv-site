@@ -507,6 +507,20 @@ body {
   display: inline;
 }
 
+.row {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 100%; /* allows columns to stack */
+  max-width: 100%;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 /* ------------------------------------------------OVERRIDE--------------------------------------- */
 @media (max-width: 768px) {
