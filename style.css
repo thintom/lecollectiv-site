@@ -576,13 +576,21 @@ text-transform: uppercase;
     gap: 10px;
     width: 100%;
     align-items: flex-start;
-    align-items: center; /* Center everything inside nav-left */
   }
 
+  .logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.nav-logo {
+  height: 60px;
+}
   .nav-logo {
     height: 60px;
     margin-bottom: 10px;
-    align-self: center; 
   }
 
   .nav-right {
