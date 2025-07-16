@@ -6,9 +6,22 @@
   <title>Lecollectiv</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+  
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+<noscript>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
+  
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
+
+  <script>
+  if (navigator.connection && navigator.connection.downlink < 0.5) {
+    document.documentElement.classList.add('lite-mode');
+  }
+</script>
+  
 </head>
 <body>
 
@@ -18,7 +31,7 @@
 
             <div class="logo-wrapper">
              <a href="index-fr.html">
-      <img src="logo4.png" alt="Logo" class="nav-logo" />
+      <img src="logo4.png" alt="Logo" class="nav-logo" loading="lazy" />
         </a>
     </div>
 <!--         <img src="logo4.png" alt="Logo" class="nav-logo" />  -->
@@ -51,7 +64,7 @@
     </div>
 
     <div class="banner-right">
-      <img src="car.jpg" alt="Image Bannière" />
+      <img src="car.jpg" alt="Image Bannière" loading="lazy"/>
     </div>
   </div>
 
@@ -80,7 +93,7 @@
       </p>
     </div>
     <div class="column image-column">
-      <img src="vision.jpg" alt="Notre Vision" />
+      <img src="vision.jpg" alt="Notre Vision" loading="lazy"/>
     </div>
   </div>
 </section>
@@ -99,10 +112,10 @@
     <div class="right-column">
       <div class="carousel">
         <a href="waterpump-fr.html" class="carousel-link">
-          <img src="farm.jpg" class="carousel-image active" alt="Projet 1">
+          <img src="farm.jpg" class="carousel-image active" alt="Projet 1" loading="lazy">
         </a>
         <a href="waterpump-fr.html" class="carousel-link">
-          <img src="waterpump.jpg" class="carousel-image" alt="Projet 2">
+          <img src="waterpump.jpg" class="carousel-image" alt="Projet 2" loading="lazy">
         </a>
       </div>
     </div>
@@ -130,7 +143,7 @@
       </p>
     </div>
     <div class="image-column1">
-      <img src="art_pic.jpg" alt="Notre équipe ou actions" />
+      <img src="art_pic.jpg" alt="Notre équipe ou actions" loading="lazy" />
     </div>
   </div>
 </section>
@@ -150,6 +163,17 @@
     </form>
   </div>
 </section> -->
+
+  <div id="lite-warning" style="display:none; padding: 1em; background: #eee; color: #333; text-align: center;">
+  📶 Connexion lente détectée. Mode allégé activé pour accélérer le chargement.
+</div>
+
+<script>
+  if (document.documentElement.classList.contains('lite-mode')) {
+    document.getElementById('lite-warning').style.display = 'block';
+  }
+</script>
+  
 
 <script src="script.js"></script> 
 
