@@ -707,3 +707,16 @@ text-transform: uppercase;
   }
 }
 
+
+
+.lite-mode img {
+  display: none !important;
+}
+
+.lite-mode .carousel, .lite-mode .banner-right {
+  display: none;
+}
+
+.lite-mode .banner-center h1 {
+  font-size: 1.2em;
+}
