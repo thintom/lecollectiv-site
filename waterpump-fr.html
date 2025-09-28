@@ -140,7 +140,19 @@ text-transform: uppercase;
   }
 }
 
+  .square-video {
+  aspect-ratio: 1 / 1;  /* makes the box square */
+  width: 100%;
+  max-width: 400px;     /* optional: limits size */
+}
 
+.square-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* fills the square nicely */
+  border-radius: 8px;
+  display: block;
+}
 
   </style>
 </head>
@@ -232,6 +244,22 @@ text-transform: uppercase;
 
     <p>Vous êtes riche ou modeste, du pays ou d’ailleurs ? Peu importe. Ce projet est pour tous ceux qui croient qu’un enfant ne devrait pas manquer d’eau à boire en 2025.</p>
 
+          <div class="side-by-side-images">
+      <div class="image-column3 square-video">
+        <video controls>
+          <source src="video_mtieki_1_cut.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="image-column3 square-video">
+        <video controls>
+          <source src="video_mtieki_2_cut (1).mkv" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+      
     <h2>Comment vous pouvez aider :</h2>
     <ul>
       <li>Faites un don (même symbolique)</li>
@@ -260,4 +288,5 @@ text-transform: uppercase;
 
 </body>
 </html>
+
 
